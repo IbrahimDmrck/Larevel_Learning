@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Front\Homepage;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +14,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/deneme', function () {
-    return view('anasayfa');
-});
+Route::get('/', [Homepage::class, 'index']);
 
 
-Route::get('/', [UserController::class, 'index']);
-// Route::get('/hakkimizda',"app@hakkimizda");
-// Route::get('/selam',"deneme@selam");
-
-// Route::get('/iletisim',"Ornek@iletisim");
