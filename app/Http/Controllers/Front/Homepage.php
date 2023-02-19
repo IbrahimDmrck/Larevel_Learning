@@ -64,12 +64,7 @@ class Homepage extends Controller
 
   public function contactpost(Request $request){
 
-  //   $request->validate([
-  //     "name"=>"required|min:5",
-  //     "email"=>"required|email",
-  //     "topic"=>"required",
-  //     "message"=>"required|min:10"
-  // ]);
+
 
     $validate=Validator::make($request->post(),[
       "name"=>"required|min:5",
